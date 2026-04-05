@@ -1,12 +1,13 @@
 # Agent Skills Collection
 
-个人收集和定制的 Agent Skills，用于增强编码助手的提交、文档等能力。
+个人收集和定制的 Agent Skills，用于扩展编码助手的能力。
 
 ## 包含的 Skills
 
 | Skill | 类型 | 说明 |
 |-------|------|------|
 | [commit-work](./third-party/commit-work/) | third-party | 高质量 git 提交，支持中文 commit message（可配置语言） |
+| [leetcode-env-creator](./custom/leetcode-env-creator/) | custom | 根据 LeetCode 题目链接和编程语言，创建本地练习环境（代码模板 + 测试用例） |
 | [project-doc-generator](./custom/project-doc-generator/) | custom | 全面分析代码项目并生成用户视角的详细文档 |
 
 ## 前置要求
@@ -82,6 +83,8 @@ npx skills add . --list
 ```
 skills/
 ├── custom/                    # 自编写的 skills
+│   ├── leetcode-env-creator/
+│   │   └── SKILL.md
 │   └── project-doc-generator/
 │       └── SKILL.md
 ├── third-party/               # 第三方 skills（可能包含本地微调）
@@ -98,4 +101,5 @@ skills/
 每个 Skill 可能有独立的配置项，详见各自的 README 或 SKILL.md 中的 front matter：
 
 - **commit-work**：修改 `commit_message_language` 切换 commit message 语言（默认 `zh-CN`）
+- **leetcode-env-creator**：无需额外配置，开箱即用
 - **project-doc-generator**：无需额外配置，开箱即用
